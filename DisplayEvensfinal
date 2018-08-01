@@ -1,0 +1,49 @@
+<htmL>
+<head>
+<title>
+Display even numbers between two numbers
+</title>
+<script type ="text/javascript">
+function displayEvens(){
+  var x = Number(document.getElementById("startingNumber").value);
+  var y = Number(document.getElementById("endingNumber").value);
+  var step = Number(document.getElementById("stepNumber").value);
+  var evenNumbers = new Array();
+  var arrayNumber = 0;
+  var counter;
+  if(isNaN(x) || isNaN(y) || isNaN(step)){
+    window.alert("You must enter a number in each question!");
+  }
+  if(step <= 0) {
+    window.alert("The step number must be a postive number");
+    return;
+  }
+  if(y <= x) {
+    window.alert("Your High Number needs to be larger than your Low Number");
+    return;
+  }
+
+  for (counter = x; counter <= y; counter = counter + step)
+    {
+      if(counter % 2 === 0) {
+      evenNumbers[arrayNumber] = counter;
+      arrayNumber++
+      }
+
+
+  }
+document.getElementById("demo").innerHTML = evenNumbers;
+}
+
+</script>
+</head>
+<body>
+This page will allow you two find the even numbers between a low and high number that fall under the step number:<br>
+Starting Number : <input type="text" id="startingNumber" name="txt1" value="0"><br>
+Ending Number : <input type="text" id="endingNumber" name="txt2" value="0"><br>
+Step Number : <input type="text" id="stepNumber" name="txt4" value="0"><br>
+<input type="button" id="b1" name="submit" value="add" onclick="javascript:displayEvens()">
+<p id="demo"></p>
+</body>
+
+<html>

@@ -1,0 +1,40 @@
+<htmL>
+<head>
+<title>
+Display even numbers between two numbers
+</title>
+<script type ="text/javascript">
+function displayEvens()
+{
+  var x = Number(document.getElementById("startingNumber").value);
+  var y = Number(document.getElementById("endingNumber").value);
+  var z = document.getElementById("text3"); //the sum of x and y
+  var step = Number(document.getElementById("stepNumber").value);
+  var evenNumbers = new Array();
+  var arrayNumber = 0;
+  var counter;
+  for (counter = x; counter <= y; counter++)
+    {
+    counter = counter + step - 1;
+    if(counter % 2 === 0) {
+      doocument.write(counter);
+      }
+
+    }
+
+  z.value = x + y;
+  document.getElementById("t1").innerHTML = x;
+  document.getElementById("t2").innerHTML = y;
+  document.getElementById("t3").innerHTML = step;
+}
+</script>
+</head>
+<body>
+Starting Number : <input type="text" id="startingNumber" name="txt1" value="0"><br>
+Ending Number : <input type="text" id="endingNumber" name="txt2" value="0"><br>
+Step Number : <input type="text" id="stepNumber" name="txt4" value="0"><br>
+Sum of <text id ="t1"></text> and <text id ="t2"></text> is : <input type="text" id="text3" name="txt3" value="0"><br>
+<input type="button" id="b1" name="submit" value="Add" onclick="javascript:displayEvens()">
+</body>
+
+<html>

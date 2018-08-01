@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--  How do I bring back var EvenNumber with the data i want assigned in it to display on the webpage????       -->
+
+<html lang="en">
+<head>
+    <title>Simple one click Example with Function</title>
+    <script type="text/javascript">
+        function greetTheUser(low, high, step) {  // do i need the () for the low high and step??
+            document.getElementById("low").innerText = document.getElementById("eventStartingNumber").value; // transfers user data for the lowest number to id low
+            document.getElementById("high").innerText = document.getElementById("eventMiddleNumber").value;  //transfers the high number to id high
+            document.getElementById("step").innerText = document.getElementById("stepNumber").value;  //transfers the step number to step
+            var evenNumber;  //I want to create this as an array where i can assign all the even numbers between low and high
+            var arrayNumber = 0;  // start at array number spot 0
+            for(x =  low; x <= high; x = x + step) {  // x is the lowest number, the loop will keep going until x equals the high number, x will increase by the step number
+              if(x % 2 === 0) {  // if the x number is even i want to assign it to the even number array
+                evenNumber[arrayNumber] = x;  //this line of code attach the number that x is to the array spot to be able to pull back to html to display
+                arrayNumber++; // this line increases the postion of the spot where i want the even number to be saved
+              }
+            }
+            document.getElementById("greeting").style.display = "block"; // i have no idea what this does
+        }
+    </script>
+</head>
+<body>
+    <div>
+        Enter your starting number: <input type="text" id="eventStartingNumber"/> <p>  <!-- allows user to enter starting number -->
+        Enter your middle Number: <input type="text" id="eventMiddleNumber"/> <p> <!-- allows user to enter starting number -->
+        Enter your step Number: <input type="text" id="stepNumber"/> <p> <!-- allows user to enter starting number -->
+        <button onclick="greetTheUser();">Display Evens</button>  <!-- im not sure how this code functions with the code -->
+    </div>
+    <div id="greeting" style="display:none;">  <!-- still have no idea what style splace none means -->
+        <h1>Hi, <span id="low"></span>!</h1>  <!-- i have this code here to verify that the input got passed to the fuction and came back out -->
+        <h1>Hi, <span id="high"></span>!</h1> <!-- i have this code here to verify that the input got passed to the fuction and came back out -->
+        <h1>Hi, <span id="step"></span>!</h1>  <!--  i have this code here to verify that the input got passed to the fuction and came back out -->
+    <!--  What i am missing now is how do i return evenumber with the array to call each position? -->
+    <!--  What i am missing now is how do i return evenumber with the array to call each position? -->
+    <!--  What i am missing now is how do i return evenumber with the array to call each position? -->
+    </div>
+
+</body>
+</html>

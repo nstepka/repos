@@ -1,0 +1,28 @@
+<html>
+
+<head>
+<title> Addition of two numbers..
+</title>
+<script type="text/javascript">
+function addition() {
+
+  var x = Number(document.getElementById("firstNumber").value);
+  var y = Number(document.getElementById("secondNumber").value);
+  var step = Number(document.getElementById("stepNumber").value);
+  var z = document.getElementById("text3");
+  z.value = x + y;
+  document.getElementsByClassName("t1").innerHTML = x;
+  document.getElementsByClassName("t2").innerHTML = y;
+  }
+</script>
+</head>
+<body>
+Starting Number : <input type="text" id="firstNumber" name="firstNumber" value ="0"><br>
+Ending Number : <input type="text" id="secondNumber" name="secondNumber" value ="0"><br>
+<!-- Step Number : <input type="text" id="stepNumber" name="stepNumber" value ="0"><br> -->
+Sum of <text id="t1"></text> and <text id="t2"></text> is : <input type="text" id="text3" name="txt3" value="O"><br>
+Sum of <text id ="t1"></text> and <text id ="t2"></text> is : <input type="text" id="text3" name ="text3" value="0"><br>
+<input type ="button" id="b1" name ="submit" value ="add" onclick="javascript:addition()">
+Sum of <text id ="t1"></text> and <text id ="t2"></text> is : <input type="text" id="text3" name ="text3" value="0"><br>
+</body>
+</html>

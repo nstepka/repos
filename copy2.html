@@ -1,0 +1,24 @@
+<htmL>
+<head>
+<title>
+Addition of two Numbers..
+</title>
+<script type ="text/javascript">
+function addition()
+{
+  var x = Number(document.getElementById("text1").value);
+  var y = Number(document.getElementById("text2").value);
+  var z = document.getElementById("text3");
+  z.value = x + y;
+  document.getElementById("t1").innerHTML = x;
+  document.getElementById("t2").innerHTML = y;
+}
+</script>
+</head>
+<body>
+Starting Number : <input type="text" id="text1" name="txt1" value="0"><br>
+Second Value : <input type="text" id="text2" name="txt2" value="0"><br>
+Sum of <text id ="t1"></text> and <text id ="t2"></text> is : <input type="text" id="text3" name="txt3" value="0"><br>
+<input type="button" id="b1" name="submit" value="Add" onclick="javascript:addition()">
+</body>
+<html>
